@@ -1,0 +1,59 @@
+page-page1 {
+  .center {
+    text-align: center
+  }
+  .bluefont {
+    color: #0c60ee;
+  }
+  .cardhedder {
+    font-size: 1.5rem;
+  }
+  .alignleft {
+    float: left;
+  }
+  .alignright {
+    float: right;
+  }
+  .margin10 {
+    margin: 10px;
+  }
+
+  .flag1 {
+    float: left;
+    margin: 10px;
+  }
+
+  .flag2 {
+    float: right;
+    margin: 10px;
+  }
+  .card-background-page {
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
+
+  }
+  .scroll-bar-indicator
+  {
+    display: none;
+  }
+
+}
