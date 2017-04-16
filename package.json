@@ -1,13 +1,12 @@
 {
   "name": "cridcScore",
   "author": "Abhishek.k",
-  "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve",
+//    "ionic:serve": "ionic-app-scripts serve",
     "start": "ionic-app-scripts serve"
   },
   "dependencies": {
@@ -32,9 +31,6 @@
   "devDependencies": {
     "@ionic/app-scripts": "^1.3.3",
     "typescript": "~2.2.1"
-  },
-  "config": {
-    "ionic_source_map_type": "eval"
   },
   "cordovaPlugins": [
     "cordova-plugin-whitelist",
