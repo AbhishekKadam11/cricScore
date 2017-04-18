@@ -6,8 +6,7 @@
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "ionic:build": "ionic-app-scripts build",
-    "start": "node server.js",
-    "heroku-postbuild": "ionic-app-scripts build"
+    "start": "node server.js"
   },
   "dependencies": {
     "@angular/common": "4.0.0",
