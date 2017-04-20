@@ -3,10 +3,11 @@
   "author": "Abhishek.k",
   "private": true,
   "scripts": {
-    "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
+    "clean": "ionic-app-scripts clean",
     "ionic:build": "ionic-app-scripts build",
-    "start": "node server.js"
+    "ionic:serve": "ionic-app-scripts serve",
+    "start": "ionic serve"
   },
   "dependencies": {
     "@angular/common": "4.0.0",
