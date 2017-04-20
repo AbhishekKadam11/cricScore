@@ -1,7 +1,8 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 
-app.use(express.static(__dirname + '/'));
+app.use(express.static(path.resolve(__dirname, 'www')));
 
 // Start server
 var port = process.env.OPENSHIFT_NODEJS_PORT || 8080

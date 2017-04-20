@@ -7,7 +7,7 @@
     "clean": "ionic-app-scripts clean",
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
-    "start": "ionic serve"
+    "start": "node server.js"
   },
   "dependencies": {
     "@angular/common": "4.0.0",
