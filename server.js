@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var http = require('http');
-var cricapi = require("node-cricapi");
+// var cricapi = require("node-cricapi");
 var request = require('request');
 
 app.use(express.static(path.resolve(__dirname, 'www')));
