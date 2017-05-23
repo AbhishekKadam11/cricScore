@@ -24339,12 +24339,14 @@ page-page1 .margin10 {
 
 page-page1 .flag1 {
   float: left;
-  margin: 10px;
+  margin: 20px;
+  width: 50px;
 }
 
 page-page1 .flag2 {
   float: right;
-  margin: 10px;
+  margin: 20px;
+  width: 50px;
 }
 
 page-page1 .card-background-page ion-card {
@@ -24371,4 +24373,27 @@ page-page1 .card-background-page .card-subtitle {
 
 page-page1 .scroll-bar-indicator {
   display: none;
+}
+
+page-page1 .cardcenter {
+  margin-top: 30px;
+}
+
+page-page1 .container-side-menu {
+  width: 10%;
+  top: 15%;
+  right: 15px;
+  position: absolute;
+  margin: auto;
+}
+
+page-page1 .container-side-menu .button {
+  font-size: 10px;
+  line-height: 10px;
+}
+
+page-page1 .container-side-menu .button-icon .icon {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 3px !important;
 }
