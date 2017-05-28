@@ -31,14 +31,7 @@ export class LiveMatchService {
 
 
 
-  getIPAddress() {
-    return new Promise(resolve => {
-      this.http.get('https://randomuser.me/api/')
-        .subscribe(data => {
-          resolve(data.json());
-        });
-    });
-  }
+
 
 
 

@@ -24317,6 +24317,12 @@ page-page1 .center {
   text-align: center;
 }
 
+page-page1 .centertxt {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 page-page1 .bluefont {
   color: #0c60ee;
 }

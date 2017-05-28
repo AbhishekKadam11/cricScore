@@ -21,8 +21,8 @@ export class Page1 {
     //  console.log(data);
     // });
     livematchservice.livematches().then(data => {
-      console.log(data['matches']);
-      this.matchtiles = data['matches'];
+     // console.log(data);
+      this.matchtiles = data;
     });
 
 
