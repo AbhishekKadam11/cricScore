@@ -24355,6 +24355,16 @@ page-page1 .flag2 {
   width: 50px;
 }
 
+page-page1 .teamtitle1 {
+  margin-top: -20px;
+  text-align: center;
+}
+
+page-page1 .teamtitle2 {
+  margin-top: -20px;
+  text-align: center;
+}
+
 page-page1 .card-background-page ion-card {
   position: relative;
   text-align: center;
@@ -24382,7 +24392,7 @@ page-page1 .scroll-bar-indicator {
 }
 
 page-page1 .cardcenter {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 page-page1 .container-side-menu {
@@ -24402,4 +24412,8 @@ page-page1 .container-side-menu .button-icon .icon {
   display: block;
   font-size: 30px;
   margin-bottom: 3px !important;
+}
+
+page-page1 .mt-20 {
+  margin-top: -20px;
 }

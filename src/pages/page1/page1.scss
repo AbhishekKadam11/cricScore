@@ -38,12 +38,13 @@ page-page1 {
   }
 
   .teamtitle1 {
-    //float: left;
-
+    margin-top: -20px;
+    text-align: center;
   }
 
   .teamtitle2 {
-    //float: right;
+    margin-top: -20px;
+    text-align: center;
   }
 
   .card-background-page {
@@ -75,7 +76,7 @@ page-page1 {
     display: none;
   }
   .cardcenter {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 
   .container-side-menu {
@@ -93,6 +94,9 @@ page-page1 {
     display: block;
     font-size: 30px;
     margin-bottom: 3px !important;
+  }
+  .mt-20 {
+    margin-top: -20px;
   }
 
 }

@@ -10,23 +10,19 @@
 
 <ion-content class="card-background-page">
   <ion-item-group>
-    <ion-item-divider color="light">
-      <div class="bluefont">
-        Live
-      </div>
-    </ion-item-divider>
+    <!--<ion-item-divider color="light">-->
+      <!--<div class="bluefont">-->
+        <!--Live-->
+      <!--</div>-->
+    <!--</ion-item-divider>-->
 
     <ion-item *ngFor="let item of matchtiles" >
 
-      <ion-card>
-        <ion-card-header>
-          <!--<div class="cardhedder">-->
-            <!--ODI-->
-          <!--</div>-->
-        </ion-card-header>
+      <ion-card (click)="matchDetails(item['unique_id'])">
+
         <ion-card-content>
           <ion-row>
-            <ion-col style="width: 40%">
+            <ion-col style="width: 45%">
               <div class="flag1">
 
                 <img src="../../assets/icon/icon/flags/48/{{item['team-1']}}.png" onerror="this.onerror=null;this.src='../../assets/icon/icon/flags/48/default.png';" />
@@ -49,23 +45,23 @@
                 <!--</div>-->
               <!--</div>-->
             </ion-col>
-            <ion-col style="width: 40%">
+            <ion-col style="width: 45%">
               <div class="flag2">
                 <img src="../../assets/icon/icon/flags/48/{{item['team-2']}}.png" onerror="this.onerror=null;this.src='../../assets/icon/icon/flags/48/default.png';"/>
               </div>
             </ion-col>
           </ion-row>
           <ion-row style="margin-top: -15px">
-            <ion-col style="width: 40%">
-              <ion-item text-wrap style="text-align: center">{{item['team-1']}}</ion-item>
+            <ion-col style="">
+              <ion-item text-wrap style=" margin-top: -20px; padding-left: 0px; text-align: center; width:110px">{{item['team-1']}}</ion-item>
               <!--<div class="teamtitle1 center item-text-wrap">-->
                 <!--<h6> {{item['team-1']}} </h6>-->
               <!--</div>-->
             </ion-col>
             <ion-col style="width: 20%">
             </ion-col>
-            <ion-col style="width: 40%">
-              <ion-item text-wrap style="text-align: center">{{item['team-2']}}</ion-item>
+            <ion-col style="">
+              <ion-item text-wrap style=" margin-top: -20px;  padding-left: 0px;; text-align: center; width:110px">{{item['team-2']}}</ion-item>
               <!--<div class="item-text-wrap">-->
                 <!--<h6> {{item['team-2']}} </h6>-->
               <!--</div>-->

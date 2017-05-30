@@ -22,8 +22,8 @@ export class cricscore {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Page One', component: Page1 },
-      { title: 'Page Two', component: Page2 }
+      { title: 'Match List', component: Page1 },
+      { title: 'Score Of Match', component: Page2 }
     ];
 
   }

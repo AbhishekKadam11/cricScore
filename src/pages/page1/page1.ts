@@ -5,6 +5,7 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 import {LiveMatchService} from './page1.service';
+import { Page2 } from '../page2/page2';
 
 @Component({
   selector: 'page-page1',
@@ -13,21 +14,21 @@ import {LiveMatchService} from './page1.service';
 })
 export class Page1 {
   public matchtiles;
+
   constructor(public navCtrl: NavController, private livematchservice: LiveMatchService, private http:Http) {
-    // this.livematchservice.livematches().subscribe((result) => {
-    //   console.log(result);
-    // });
-    // this.http.get('https://cricserver11.herokuapp.com/api/matchlist').map(res => res.json()).subscribe(data => {
-    //  console.log(data);
-    // });
     livematchservice.livematches().then(data => {
-     // console.log(data);
+    //  console.log(data);
       this.matchtiles = data;
     });
-
-
   }
 
+   public matchDetails(matchId) {
+     console.log(matchId);
+     this.livematchservice.matchinfo(matchId).then(data =>{
+       console.log(data);
+       this.navCtrl.push(Page2);
 
+    })
+  }
 
 }
