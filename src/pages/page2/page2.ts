@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 
 import { NavController, NavParams } from 'ionic-angular';
+// import { Page1 } from '../page1/page1';
+import { Tab1 } from '../tabs/tab1/tabpage1';
+import { Tab2 } from '../tabs/tab2/tabpage2';
+import { Tab3 } from '../tabs/tab3/tabpage3';
+import { Tab4 } from '../tabs/tab4/tabpage4';
 
 @Component({
   selector: 'page-page2',
@@ -8,31 +13,28 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class Page2 {
   selectedItem: any;
-  icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+  matchId: string;
+
+  tab1Root = Tab1;
+  tab2Root = Tab2;
+  tab3Root = Tab3;
+  tab4Root = Tab4;
+  // tab3Root = Page3;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
+   // this.selectedItem = navParams.get('item');
+    this.matchId = navParams.get('matchId');
 
-    // Let's populate this page with some filler content for funzies
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
 
-    this.items = [];
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
   }
 
-  itemTapped(event, item) {
-    // That's right, we're pushing to ourselves!
-    this.navCtrl.push(Page2, {
-      item: item
-    });
+
+  public matchDetails(matchId) {
+
+
   }
+
+
 }

@@ -19,66 +19,89 @@
     <ion-item *ngFor="let item of matchtiles" >
 
       <ion-card (click)="matchDetails(item['unique_id'])">
-
         <ion-card-content>
+        <ion-grid>
           <ion-row>
-            <ion-col style="width: 45%">
-              <div class="flag1">
-
+            <ion-col>
+              <div style="">
                 <img src="../../assets/icon/icon/flags/48/{{item['team-1']}}.png" onerror="this.onerror=null;this.src='../../assets/icon/icon/flags/48/default.png';" />
-
+                <!--<ion-item text-wrap >{{item['team-1']}}</ion-item>-->
               </div>
-
             </ion-col>
-            <ion-col style="width: 20%">
-
-              <!--<div class="center">-->
-                <!--<div class="score">-->
-                  <!--IN: 100/2-->
-                <!--</div>-->
-
-                <div class="cardcenter" >
-                 <h3> V/S </h3>
-                </div>
-                <!--<div class="matchstat">-->
-                  <!--IN need 120 in 38.1 over.-->
-                <!--</div>-->
-              <!--</div>-->
+            <ion-col>
+              <div class="cardcenter" >
+                <h3> V/S </h3>
+              </div>
             </ion-col>
-            <ion-col style="width: 45%">
-              <div class="flag2">
+            <ion-col>
+              <div style="">
                 <img src="../../assets/icon/icon/flags/48/{{item['team-2']}}.png" onerror="this.onerror=null;this.src='../../assets/icon/icon/flags/48/default.png';"/>
+                <!--<ion-item text-wrap>{{item['team-2']}}</ion-item>-->
               </div>
             </ion-col>
           </ion-row>
-          <ion-row style="margin-top: -15px">
-            <ion-col style="">
-              <ion-item text-wrap style=" margin-top: -20px; padding-left: 0px; text-align: center; width:110px">{{item['team-1']}}</ion-item>
-              <!--<div class="teamtitle1 center item-text-wrap">-->
-                <!--<h6> {{item['team-1']}} </h6>-->
-              <!--</div>-->
+
+          <ion-row>
+            <ion-col>
+              <div style="">
+
+                <ion-item text-wrap style="text-align: center;">{{item['team-1']}}</ion-item>
+              </div>
             </ion-col>
-            <ion-col style="width: 20%">
+            <ion-col>
+
             </ion-col>
-            <ion-col style="">
-              <ion-item text-wrap style=" margin-top: -20px;  padding-left: 0px;; text-align: center; width:110px">{{item['team-2']}}</ion-item>
-              <!--<div class="item-text-wrap">-->
-                <!--<h6> {{item['team-2']}} </h6>-->
-              <!--</div>-->
+            <ion-col>
+              <div style="">
+
+                <ion-item text-wrap style="text-align: center; padding-left: 16px;">{{item['team-2']}}</ion-item>
+              </div>
             </ion-col>
           </ion-row>
+
+        </ion-grid>
+
+
           <!--<ion-row>-->
-            <!--<ion-col>-->
-              <!--<div class=" teamtitle1">-->
-                <!--<h6> {{item['team-1']}} </h6>-->
+            <!--<ion-col style="width: 45%">-->
+              <!--<div class="flag1">-->
+
+                <!--<img src="../../assets/icon/icon/flags/48/{{item['team-1']}}.png" onerror="this.onerror=null;this.src='../../assets/icon/icon/flags/48/default.png';" />-->
+
               <!--</div>-->
+
             <!--</ion-col>-->
-            <!--<ion-col>-->
-              <!--<div class=" teamtitle2">-->
-                <!--<h6> {{item['team-2']}} </h6>-->
+            <!--<ion-col style="width: 20%">-->
+
+
+                <!--<div class="cardcenter" >-->
+                 <!--<h3> V/S </h3>-->
+                <!--</div>-->
+
+            <!--</ion-col>-->
+            <!--<ion-col style="width: 45%">-->
+              <!--<div class="flag2">-->
+                <!--<img src="../../assets/icon/icon/flags/48/{{item['team-2']}}.png" onerror="this.onerror=null;this.src='../../assets/icon/icon/flags/48/default.png';"/>-->
               <!--</div>-->
             <!--</ion-col>-->
           <!--</ion-row>-->
+          <!--<ion-row style="margin-top: -15px">-->
+            <!--<ion-col style="">-->
+              <!--<ion-item text-wrap style=" margin-top: -20px; padding-left: 0px; text-align: center; width:110px">{{item['team-1']}}</ion-item>-->
+              <!--&lt;!&ndash;<div class="teamtitle1 center item-text-wrap">&ndash;&gt;-->
+                <!--&lt;!&ndash;<h6> {{item['team-1']}} </h6>&ndash;&gt;-->
+              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--</ion-col>-->
+            <!--<ion-col style="width: 20%">-->
+            <!--</ion-col>-->
+            <!--<ion-col style="">-->
+              <!--<ion-item text-wrap style=" margin-top: -20px;  padding-left: 0px;; text-align: center; width:110px">{{item['team-2']}}</ion-item>-->
+              <!--&lt;!&ndash;<div class="item-text-wrap">&ndash;&gt;-->
+                <!--&lt;!&ndash;<h6> {{item['team-2']}} </h6>&ndash;&gt;-->
+              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--</ion-col>-->
+          <!--</ion-row>-->
+
         </ion-card-content>
       </ion-card>
     </ion-item>

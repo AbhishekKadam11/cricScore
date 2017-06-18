@@ -7,19 +7,30 @@
   </ion-navbar>
 </ion-header>
 
-<!--<ion-content>-->
-  <!--<ion-list>-->
-    <!--<button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">-->
-      <!--<ion-icon [name]="item.icon" item-left></ion-icon>-->
-      <!--{{item.title}}-->
-      <!--<div class="item-note" item-right>-->
-        <!--{{item.note}}-->
-      <!--</div>-->
-    <!--</button>-->
-  <!--</ion-list>-->
-  <!--<div *ngIf="selectedItem" padding>-->
-    <!--You navigated here from <b>{{selectedItem.title}}</b>-->
-  <!--</div>-->
-<!--</ion-content>-->
+<!--<ion-tabs>-->
+  <!--<ion-tab [root]="tab1Root" tabTitle="YouTube" tabIcon="home"></ion-tab>-->
+  <!--<ion-tab [root]="tab2Root" tabTitle="Wikipedia" tabIcon="information-circle"></ion-tab>-->
+  <!--<ion-tab [root]="tab3Root" tabTitle="JSONParser" tabIcon="contacts"></ion-tab>-->
+<!--</ion-tabs>-->
+<ion-content>
+  <ion-tabs>
+    <ion-tab [root]="tab1Root" tabTitle="Live" [rootParams]="matchId"> </ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="Scorecard" [rootParams]="matchId"></ion-tab>
+    <ion-tab [root]="tab3Root" tabTitle="Commentry" [rootParams]="matchId"></ion-tab>
+    <ion-tab [root]="tab4Root" tabTitle="Info" [rootParams]="matchId"></ion-tab>
+  </ion-tabs>
+  <!--<ion-card>-->
+    <!--<ion-card-content>-->
+      <!--<ion-grid>-->
+        <!--<ion-row>-->
+          <!--<ion-col>-->
+
+          <!--</ion-col>-->
+        <!--</ion-row>-->
+      <!--</ion-grid>-->
+    <!--</ion-card-content>-->
+  <!--</ion-card>-->
+
+</ion-content>
 
 

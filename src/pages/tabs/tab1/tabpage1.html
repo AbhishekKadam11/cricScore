@@ -1,0 +1,53 @@
+<!--<ion-header>-->
+  <!--<ion-navbar>-->
+    <!--<button ion-button menuToggle>-->
+      <!--<ion-icon name="menu"></ion-icon>-->
+    <!--</button>-->
+    <!--<ion-title class="center" style="margin-left: -28px"><span style="color: red">cric</span><span style="color: blue">Score</span> </ion-title>-->
+  <!--</ion-navbar>-->
+<!--</ion-header>-->
+
+<!--<ion-tabs>-->
+  <!--<ion-tab [root]="tab1Root" tabTitle="YouTube" tabIcon="home"></ion-tab>-->
+  <!--<ion-tab [root]="tab2Root" tabTitle="Wikipedia" tabIcon="information-circle"></ion-tab>-->
+  <!--<ion-tab [root]="tab3Root" tabTitle="JSONParser" tabIcon="contacts"></ion-tab>-->
+<!--</ion-tabs>-->
+<ion-content>
+  <!--<ion-tabs>-->
+    <!--<ion-tab [root]="tab1Root" tabTitle="YouTube"> </ion-tab>-->
+    <!--<ion-tab [root]="tab2Root" tabTitle="Wikipedia"></ion-tab>-->
+    <!--<ion-tab [root]="tab3Root" tabTitle="JSONParser"></ion-tab>-->
+  <!--</ion-tabs>-->
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+            <ion-item text-wrap>
+              <ion-label style="float: right; color: red">{{starttime | date: 'dd/MM/yyyy H:mm'}}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item text-wrap style="margin-top: -25px">
+              <ion-label>{{score}}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item text-wrap style="padding: 0px; margin-top: -25px">
+              <ion-label style="font-size: small">( {{required}} )</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+
