@@ -31,18 +31,59 @@
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>
+          <ion-col col-12>
             <ion-item text-wrap style="margin-top: -25px">
-              <ion-label>{{score}}</ion-label>
+              <ion-label >{{score}}</ion-label>
             </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>
-            <ion-item text-wrap style="padding: 0px; margin-top: -25px">
+          <ion-col col-12>
+            <ion-item text-wrap>
               <ion-label style="font-size: small">( {{required}} )</ion-label>
             </ion-item>
           </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+
+
+            <!--<ion-item  >-->
+              <div col-12 *ngFor="let data of ballarray">
+
+
+                   <ion-row>
+                      <ion-col col-2 class="float: left;">
+                {{data['overs_actual']}}
+                      </ion-col>
+                      <ion-col col-10 class="float: left;">
+                        <ion-row>
+                          <span>{{data['players']}}</span>
+                        </ion-row>
+                        <ion-row>
+                          <span style="color: #8c8c8c"> {{data['text']}} </span>
+                        </ion-row>
+
+                      </ion-col>
+                   </ion-row>
+
+
+              </div>
+            <!--</ion-item>-->
+
+        </ion-row>
+        <ion-row>
+          <!--<ion-col col-12>-->
+            <!--<ion-item text-wrap style="margin-top: -25px">-->
+              <!--<ion-label >{{score}}</ion-label>-->
+            <!--</ion-item>-->
+          <!--</ion-col>-->
         </ion-row>
       </ion-grid>
     </ion-card-content>
