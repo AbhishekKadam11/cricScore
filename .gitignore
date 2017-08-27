@@ -18,7 +18,7 @@ npm-debug.log*
 .versions/
 coverage/
 dist/
-
+node_modules/
 
 tmp/
 temp/
@@ -33,5 +33,4 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
-src/assets/icon/icon/flags/48/default.png
-www/assets/icon/icon/flags/48/default.png
+
