@@ -13,7 +13,7 @@ import { Tab4 } from '../tabs/tab4/tabpage4';
 })
 export class Page2 {
   selectedItem: any;
-  matchId: string;
+  MatchId: string;
 
   tab1Root = Tab1;
   tab2Root = Tab2;
@@ -25,7 +25,7 @@ export class Page2 {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
    // this.selectedItem = navParams.get('item');
-    this.matchId = navParams.get('matchId');
+    this.MatchId = navParams.get('MatchId');
 
 
   }

@@ -8,7 +8,7 @@ import { Tab1 } from '../pages/tabs/tab1/tabpage1';
 import { Tab2 } from '../pages/tabs/tab2/tabpage2';
 import { Tab3 } from '../pages/tabs/tab3/tabpage3';
 import { Tab4 } from '../pages/tabs/tab4/tabpage4';
-//import {LiveMatchService} from '../pages/page1/page1.service';
+import { ObjNgFor } from '../pages/page1/objngfor';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,12 +23,12 @@ import { HttpModule } from '@angular/http';
     Tab2,
     Tab3,
     Tab4,
-  //  LiveMatchService
+    ObjNgFor
+
   ],
   imports: [
     BrowserModule,
     HttpModule,
- //   LiveMatchService,
     IonicModule.forRoot(cricscore,{
       tabsPlacement: 'top',
       platforms: {

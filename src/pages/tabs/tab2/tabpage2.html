@@ -1,35 +1,72 @@
-<!--<ion-header>-->
-  <!--<ion-navbar>-->
-    <!--<button ion-button menuToggle>-->
-      <!--<ion-icon name="menu"></ion-icon>-->
-    <!--</button>-->
-    <!--<ion-title class="center" style="margin-left: -28px"><span style="color: red">cric</span><span style="color: blue">Score</span> </ion-title>-->
-  <!--</ion-navbar>-->
-<!--</ion-header>-->
+<ion-navbar *navbar>
+  <ion-title></ion-title>
+  <button menuToggle end>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+</ion-navbar>
 
-<!--<ion-tabs>-->
-  <!--<ion-tab [root]="tab1Root" tabTitle="YouTube" tabIcon="home"></ion-tab>-->
-  <!--<ion-tab [root]="tab2Root" tabTitle="Wikipedia" tabIcon="information-circle"></ion-tab>-->
-  <!--<ion-tab [root]="tab3Root" tabTitle="JSONParser" tabIcon="contacts"></ion-tab>-->
-<!--</ion-tabs>-->
 <ion-content>
-  <!--<ion-tabs>-->
-    <!--<ion-tab [root]="tab1Root" tabTitle="YouTube"> </ion-tab>-->
-    <!--<ion-tab [root]="tab2Root" tabTitle="Wikipedia"></ion-tab>-->
-    <!--<ion-tab [root]="tab3Root" tabTitle="JSONParser"></ion-tab>-->
-  <!--</ion-tabs>-->
-  <ion-card>
-    <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-Tab2
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
+
+  <ion-list inset>
+    <div *ngFor="let inn of innings ; let i = index">
+      <!--<div *ngFor="let item of inn.batting">-->
+      <ion-item
+        style="background-color: gainsboro; margin-bottom: 5px"
+        [ngClass]="{active: isGroupShown(i)}"
+        (click)="toggleScorecard(i)">
+        <ion-icon item-right  [name]="isGroupShown(i) ? 'remove' : 'add'"></ion-icon>
+        &nbsp;
+        {{inn['batting'].title}}
+      </ion-item>
+      <ion-item class="item-accordion"
+                [ngClass]="isGroupShown(i) ? '' : 'hide'">
+
+        <table style="width: 100%" cellspacing="10" class="rwd-table">
+          <tr style="background-color: lightsteelblue;">
+            <th width="50%" align="left" style="padding-left:10px">Batsman</th>
+            <th width="10%" align="left">R</th>
+            <th width="10%" align="left">B</th>
+            <th width="10%" align="left">4s</th>
+            <th width="10%" align="left">6s</th>
+            <th width="10%" align="left">SR</th>
+          </tr>
+          <tr *ngFor="let item of inn['batting'].scores">
+
+            <td data-th="Batsman" style="padding-left:10px">{{item.batsman}}</td>
+            <td data-th="R">{{item.R}}</td>
+            <td data-th="B">{{item.B}}</td>
+            <td data-th="4">{{item['4s']}}</td>
+            <td data-th="6">{{item['6s']}}</td>
+            <td data-th="SR">{{item.SR}}</td>
+          </tr>
+        </table>
+        <!--<span *ngFor="let bowl of bowling" >-->
+        <table style="width: 100%" cellspacing="10" class="rwd-table">
+          <tr style="background-color: lightsteelblue;">
+            <th width="50%" align="left" style="padding-left:10px">Bowler</th>
+            <th width="10%" align="left">O</th>
+            <th width="10%" align="left">M</th>
+            <th width="10%" align="left">R</th>
+            <th width="10%" align="left">W</th>
+            <th width="10%" align="left">Econ</th>
+          </tr>
+
+          <tr *ngFor="let item of inn['bowling'].scores">
+            <td data-th="Bowler" style="padding-left:10px">{{item.bowler}}</td>
+            <td data-th="O">{{item.O}}</td>
+            <td data-th="M">{{item.M}}</td>
+            <td data-th="R">{{item.R}}</td>
+            <td data-th="W">{{item.W}}</td>
+            <td data-th="W">{{item.Econ}}</td>
+          </tr>
+
+        </table>
+   <!--</span>-->
+      </ion-item>
+      </div>
+    <!--</div>-->
+  </ion-list>
+
+
 
 </ion-content>
-
-

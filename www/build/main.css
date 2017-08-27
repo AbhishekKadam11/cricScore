@@ -24476,6 +24476,28 @@ page-page2 .cardhedder {
   font-size: 1.5rem;
 }
 
+page-page2 .list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+
+page-page2 .list .item.item-accordion.hide {
+  line-height: 0px;
+}
+
+page-page2 .list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+
+page-page2 .list .item.item-accordion.hide {
+  line-height: 0px;
+}
+
 page-page2 .center {
   text-align: center;
 }

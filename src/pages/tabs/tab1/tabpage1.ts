@@ -6,36 +6,46 @@ import {MatchService} from '../tab.service';
 @Component({
   selector: 'tab1',
   templateUrl: 'tabpage1.html',
-  providers: [MatchService]
+ // providers: [MatchService]
 })
 export class Tab1 {
   selectedItem: any;
-  matchId: string;
+  MatchId: string;
   // private matchdata: {};
   score;
+  matchdata;
   required;
   starttime;
   matchstatus;
   balldata;
   ballarray=[];
   eachball = [];
+  scorecard = [];
   // team1: string
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private matchservice: MatchService) {
 
-    this.matchId = navParams.data;
+    this.MatchId = navParams.data;
 
   }
 
   ngOnInit() {
-    this.matchservice.matchinfo(this.matchId).then((data) => {
-      //   this.matchdata = data;
-      this.starttime = data['scoredata']['dateTimeGMT'];
-      this.required = data['scoredata']['innings-requirement'];
-      this.matchstatus = data['scoredata']['matchStarted'];
-      this.score = data['scoredata']['score'];
-      this.balldata = data['balldetails']['data'];
-      this.matchstatistics(this.balldata);
+    this.matchservice.matchinfo(this.MatchId).then((data) => {
+         this.matchdata = data;
+         console.log(data);
+      // this.starttime = data['scoredata']['dateTimeGMT'];
+      // this.required = data['scoredata']['innings-requirement'];
+      // this.matchstatus = data['scoredata']['matchStarted'];
+      // this.score = data['scoredata']['score'];
+      // this.balldata = data['balldetails']['data'];
+    //  this.scorecarddata = data['balldetails']['data'];
+      if(this.balldata) {
+        this.matchstatistics(this.balldata);
+      }
+      if(data['summary']['data']) {
+        this.scorecarddata(data['summary']['data']);
+      }
+
     })
   }
 
@@ -50,6 +60,13 @@ export class Tab1 {
           }
         }
     }
+
+    public scorecarddata(summary) {
+      this.matchservice.scorecardlist(summary);
+    }
+
+
+
  //   console.log(this.ballarray);
  // }
 

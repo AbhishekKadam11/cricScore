@@ -9,22 +9,33 @@ import 'rxjs/add/operator/map';
 
 export class MatchService {
 
+  public scorelistdata;
+
   constructor(private http:Http) {
 
   }
 
-  matchinfo(matchId) {
-    // let requestOptions = new RequestOptions();
-    // requestOptions.params = matchId;
-    //  params.set('unique_id', matchId);
+  matchinfo(MatchId) {
     return new Promise(resolve => {
-      this.http.get('https://cricserver11.herokuapp.com/api/scorelist/'+ matchId)
-     // this.http.get('http://localhost:3000/api/scorelist/'+ matchId)
+     // this.http.get('https://cricserver11.herokuapp.com/api/scorelist/'+ matchId)
+      this.http.get('http://localhost:3000/api/scorecard/'+ MatchId)
         .subscribe(data => {
           resolve(data.json());
         });
     });
   }
+
+  scorecardlist(scoredata) {
+      this.scorelistdata = scoredata;
+      this.setscorecardlist();
+  }
+
+
+ public setscorecardlist() {
+    return this.scorelistdata;
+  }
+
+
 
 
 
