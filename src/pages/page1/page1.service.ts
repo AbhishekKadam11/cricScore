@@ -12,8 +12,8 @@ export class LiveMatchService {
 
    livematches() {
      return new Promise(resolve => {
-    //   this.http.get('https://cricserver11.herokuapp.com/api/matchlist')
-       this.http.get('http://localhost:3000/api/scorecardlive')
+       this.http.get('https://cricserver11.herokuapp.com/api/scorecardlive')
+    //   this.http.get('http://localhost:3000/api/scorecardlive')
          .subscribe(data => {
            resolve(data.json());
          });
@@ -22,7 +22,7 @@ export class LiveMatchService {
 
   pastmatches() {
     return new Promise(resolve => {
-      //   this.http.get('https://cricserver11.herokuapp.com/api/matchlist')
+      //   this.http.get('https://cricserver11.herokuapp.com/api/pastmatches')
       this.http.get('http://localhost:3000/api/pastmatches')
         .subscribe(data => {
           resolve(data.json());
