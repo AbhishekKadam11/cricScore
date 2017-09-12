@@ -11,7 +11,6 @@ import {MatchService} from '../tab.service';
 export class Tab1 {
   selectedItem: any;
   MatchId: string;
-  // private matchdata: {};
   score;
   matchdata;
   required;
@@ -24,9 +23,7 @@ export class Tab1 {
   // team1: string
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private matchservice: MatchService) {
-
     this.MatchId = navParams.data;
-
   }
 
   ngOnInit() {
