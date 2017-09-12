@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 
 import {LiveMatchService} from './page1.service';
 import { Page2 } from '../page2/page2';
+import { matchinseries } from '../matchinseries/matchinseries';
 //import { ObjNgFor } from './objngfor'
 
 
@@ -19,6 +20,7 @@ export class Page1 {
   public livematchtiles;
   public pastmatchtiles;
   private matchlisterror;
+  private ongoingseries;
 
   constructor(public navCtrl: NavController, private livematchservice: LiveMatchService, private http:Http, public navParams: NavParams) {
     livematchservice.livematches().then(data => {
@@ -27,16 +29,22 @@ export class Page1 {
       this.matchlisterror = error;
     });
 
-    livematchservice.pastmatches().then(data => {
-     // this.livematchtiles = data['livematch'];
-      this.pastmatchtiles = data;
-      // for(let item of this.matchtiles) {
-      //   this.livematchlist = item['Scorecard'];
-      // }
-      // console.log(this.livematchtiles);
+    livematchservice.ongoiningseries().then(data => {
+      this.ongoingseries = data;
     }, error => {
       this.matchlisterror = error;
     });
+
+    // livematchservice.pastmatches().then(data => {
+    //  // this.livematchtiles = data['livematch'];
+    //   this.pastmatchtiles = data;
+    //   // for(let item of this.matchtiles) {
+    //   //   this.livematchlist = item['Scorecard'];
+    //   // }
+    //   // console.log(this.livematchtiles);
+    // }, error => {
+    //   this.matchlisterror = error;
+    // });
 
   }
 
@@ -46,13 +54,12 @@ export class Page1 {
      this.navCtrl.push(Page2, {
        'MatchId': matchId
      });
-
-    //  this.livematchservice.matchinfo(matchId).then(data =>{
-    //    console.log(data);
-    //    this.navCtrl.push(Page2);
-    // })
-
   }
-
+  public seriesDetails(SeriesId) {
+    console.log(SeriesId);
+    this.navCtrl.push(matchinseries, {
+      'SeriesId': SeriesId
+    });
+  }
 }
 

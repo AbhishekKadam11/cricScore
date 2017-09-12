@@ -39,12 +39,12 @@ export class Tab1 {
       // this.score = data['scoredata']['score'];
       // this.balldata = data['balldetails']['data'];
     //  this.scorecarddata = data['balldetails']['data'];
-      if(this.balldata) {
-        this.matchstatistics(this.balldata);
-      }
-      if(data['summary']['data']) {
-        this.scorecarddata(data['summary']['data']);
-      }
+    //   if(this.balldata) {
+    //     this.matchstatistics(this.balldata);
+    //   }
+    //   if(data['summary']['data']) {
+    //     this.scorecarddata(data['summary']['data']);
+    //   }
 
     })
   }

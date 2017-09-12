@@ -15,17 +15,41 @@ export class LiveMatchService {
        this.http.get('https://cricserver11.herokuapp.com/api/scorecardlive')
     //   this.http.get('http://localhost:3000/api/scorecardlive')
          .subscribe(data => {
-           resolve(data.json());
+           console.log(data);
+           if(data.status ==200){
+             resolve(data.json());
+           } else{
+             resolve("Unable to fetch data");
+           }
+
          });
      });
   }
 
   pastmatches() {
     return new Promise(resolve => {
-      //   this.http.get('https://cricserver11.herokuapp.com/api/pastmatches')
-      this.http.get('http://localhost:3000/api/pastmatches')
+         this.http.get('https://cricserver11.herokuapp.com/api/pastmatches')
+    //  this.http.get('http://localhost:3000/api/pastmatches')
         .subscribe(data => {
-          resolve(data.json());
+          if(data.status ==200){
+            resolve(data.json());
+          } else{
+            resolve("Unable to fetch data");
+          }
+        });
+    });
+  }
+
+  ongoiningseries() {
+    return new Promise(resolve => {
+         this.http.get('https://cricserver11.herokuapp.com/api/ongoingseries')
+     // this.http.get('http://localhost:3000/api/ongoingseries')
+        .subscribe(data => {
+          if(data.status ==200){
+            resolve(data.json());
+          } else{
+            resolve("Unable to fetch data");
+          }
         });
     });
   }
@@ -35,7 +59,11 @@ export class LiveMatchService {
     return new Promise(resolve => {
       this.http.get('https://cricserver11.herokuapp.com/api/scorelist/'+ matchId)
         .subscribe(data => {
-          resolve(data.json());
+          if(data.status ===200){
+            resolve(data.json());
+          } else{
+            resolve("Unable to fetch data");
+          }
         });
     });
   }

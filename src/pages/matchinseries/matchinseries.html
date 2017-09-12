@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="center" style="margin-left: -28px"><span style="color: red">cric</span><span style="color: blue">Score</span> </ion-title>
+  </ion-navbar>
+</ion-header>
+<!--<div  *ngFor="let sd of seriesdata">-->
+<ion-content>
+  <ion-item-divider color="light">
+
+      <ion-label class="bluefont center" text-wrap >{{SeriesName}}</ion-label>
+
+  </ion-item-divider>
+
+  <ion-item *ngFor="let item of matchlist">
+    <ion-card (click)="matchDetails(item['matchid'])">
+      <ion-card-content>
+
+        <!--<ion-item text-wrap class="center">{{item['matchid']}} </ion-item>-->
+        <ion-grid>
+          <ion-item text-wrap style="width: max-content">{{item['MatchNo']}} - {{item['Venue']['content']}} </ion-item>
+          <ion-row>
+            <ion-col col-4>
+                <ion-item text-wrap style="width: max-content">{{item['Team'][0]['Team']}}</ion-item>
+            </ion-col>
+            <ion-col col-4>
+              <ion-item text-wrap style="text-align: center">VS</ion-item>
+            </ion-col>
+            <ion-col col-4>
+                <ion-item text-wrap style="width: max-content;" >{{item['Team'][1]['Team']}}</ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+          <ion-item *ngIf="item['Result']">
+            <ion-item style="color: red" *ngIf="item['Result']['Team'][0]['matchwon'] == 'yes'">
+              {{item['Team'][0]['Team']}} won by {{item['Result']['by']}} {{item['Result']['how']}}
+            </ion-item>
+            <ion-item style="color: red" *ngIf="item['Result']['Team'][1]['matchwon'] == 'yes'">
+              {{item['Team'][1]['Team']}} won by {{item['Result']['by']}} {{item['Result']['how']}}
+            </ion-item>
+          </ion-item>
+            <ion-item *ngIf="!item['Result']" style="color: #8e9093; font-size: small">
+                  {{item['StartDate'] |  date:'dd-MM- yyyy hh:mm:ss'}}
+            </ion-item>
+
+
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+
+</ion-content>
+
+

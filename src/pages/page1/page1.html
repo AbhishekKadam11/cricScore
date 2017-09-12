@@ -63,95 +63,96 @@
           </ion-grid>
         </ion-card-content>
       </ion-card>
+      <ion-label *ngIf="matchlisterror">{{matchlisterror}} </ion-label>
     </ion-item>
 
     <ion-item-divider color="light">
       <div class="bluefont">
-        Highlights
+        Series
       </div>
 
     </ion-item-divider>
-    <!--<ion-item *ngFor="let item of pastmatchtiles">-->
-      <!--<ion-card (click)="matchDetails(item['matchid'])">-->
-        <!--<ion-card-content>-->
+    <ion-item *ngFor="let item of ongoingseries">
+      <ion-card (click)="seriesDetails(item['SeriesId'])">
+        <ion-card-content>
 
-          <!--{{item['MatchNo']}}-{{item['series_name']}}-->
-          <!--<ion-grid>-->
-            <!--<ion-row>-->
-              <!--<ion-col>-->
-                <!--<div style="">-->
-                  <!--<img src="assets/icon/icon/flags/48/{{item['Team'][0]['Team']}}.png" onerror="this.onerror=null;this.src='assets/icon/icon/flags/48/default.png';" />-->
-                  <!--&lt;!&ndash;<ion-item text-wrap >{{item['team-1']}}</ion-item>&ndash;&gt;-->
-                <!--</div>-->
-              <!--</ion-col>-->
-              <!--<ion-col>-->
-                <!--<div class="cardcenter" >-->
-                  <!--<h3> V/S </h3>-->
-                <!--</div>-->
-              <!--</ion-col>-->
-              <!--<ion-col>-->
-                <!--<div style="">-->
-                  <!--<img src="assets/icon/icon/flags/48/{{item['Team'][1]['Team']}}.png" onerror="this.onerror=null;this.src='assets/icon/icon/flags/48/default.png';"/>-->
-                  <!--&lt;!&ndash;<ion-item text-wrap>{{item['team-2']}}</ion-item>&ndash;&gt;-->
-                <!--</div>-->
-              <!--</ion-col>-->
-            <!--</ion-row>-->
-            <!--<ion-row>-->
-              <!--<ion-col>-->
-                <!--<div style="">-->
-                  <!--&lt;!&ndash;<ion-item text-wrap style="text-align: center;">{{item['team-1']}}</ion-item>&ndash;&gt;-->
-                <!--</div>-->
-              <!--</ion-col>-->
-              <!--<ion-col>-->
-              <!--</ion-col>-->
-              <!--<ion-col>-->
-                <!--<div style="">-->
-                  <!--&lt;!&ndash;<ion-item text-wrap style="text-align: center; padding-left: 16px;">{{item['team-2']}}</ion-item>&ndash;&gt;-->
-                <!--</div>-->
-              <!--</ion-col>-->
-            <!--</ion-row>-->
-          <!--</ion-grid>-->
-        <!--</ion-card-content>-->
-      <!--</ion-card>-->
-    <!--</ion-item>-->
+          <ion-item text-wrap class="center">{{item['SeriesName']}} </ion-item>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div style="">
+                  <img src="assets/icon/icon/flags/32/{{item['Participant']['Team'][0]['Name']}}.png" onerror="this.onerror=null;this.src='assets/icon/icon/flags/32/default.png';" />
+                  <ion-item text-wrap style="width: max-content">{{item['Participant']['Team'][0]['Name']}}</ion-item>
+                </div>
+              </ion-col>
+              <ion-col>
+                <div class="cardcenter" >
+                  <h3> V/S </h3>
+                </div>
+              </ion-col>
+              <ion-col>
+                <div style="">
+                  <img src="assets/icon/icon/flags/32/{{item['Participant']['Team'][1]['Name']}}.png" onerror="this.onerror=null;this.src='assets/icon/icon/flags/32/default.png';"/>
+                  <ion-item text-wrap style="width: max-content">{{item['Participant']['Team'][1]['Name']}}</ion-item>
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div style="">
+                  <!--<ion-item text-wrap style="text-align: center;">{{item['team-1']}}</ion-item>-->
+                </div>
+              </ion-col>
+              <ion-col>
+              </ion-col>
+              <ion-col>
+                <div style="">
+                  <!--<ion-item text-wrap style="text-align: center; padding-left: 16px;">{{item['team-2']}}</ion-item>-->
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
 
-    <!--<ion-item>-->
-      <!--<ion-card>-->
-        <!--<ion-card-header>-->
-          <!--<div class="cardhedder">-->
-            <!--ODI-->
-          <!--</div>-->
-        <!--</ion-card-header>-->
-        <!--<ion-card-content>-->
-          <!--<ion-row>-->
-            <!--<ion-col>-->
-              <!--<div class="flag1">-->
-                <!--<img src="../../assets/icon/icon/flags/32/Australia.png"/>-->
-              <!--</div>-->
-            <!--</ion-col>-->
-            <!--<ion-col>-->
-              <!--<div class="center">-->
-                <!--<div class="score">-->
-                  <!--SI: 100/2-->
-                <!--</div>-->
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <div class="cardhedder">
+            ODI
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row>
+            <ion-col>
+              <div class="flag1">
+                <img src="../../assets/icon/icon/flags/32/Australia.png"/>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div class="center">
+                <div class="score">
+                  SI: 100/2
+                </div>
 
-                <!--<div class="over ">-->
-                  <!--(21.5)-->
-                <!--</div>-->
-                <!--<div class="matchstat">-->
-                  <!--SI need 120 in 38.1 over.-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</ion-col>-->
-            <!--<ion-col>-->
-              <!--<div class="flag2">-->
-                <!--<img src="../../assets/icon/icon/flags/32/South%20Africa.png"/>-->
-              <!--</div>-->
-            <!--</ion-col>-->
-          <!--</ion-row>-->
-        <!--</ion-card-content>-->
-      <!--</ion-card>-->
-    <!--</ion-item>-->
+                <div class="over ">
+                  (21.5)
+                </div>
+                <div class="matchstat">
+                  SI need 120 in 38.1 over.
+                </div>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div class="flag2">
+                <img src="../../assets/icon/icon/flags/32/South%20Africa.png"/>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
 
     <ion-item-divider color="light">
       <div class="bluefont">

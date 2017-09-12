@@ -24313,6 +24313,28 @@ ion-navbar.toolbar {
   }
 }
 
+page-page2 .center {
+  text-align: center;
+}
+
+page-page2 .centertxt {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+page-page2 .bluefont {
+  color: #0c60ee;
+}
+
+page-page2 .cardhedder {
+  font-size: 1.5rem;
+}
+
+page-page2 .scroll-content {
+  overflow-y: auto !important;
+}
+
 page-page1 .center {
   text-align: center;
 }

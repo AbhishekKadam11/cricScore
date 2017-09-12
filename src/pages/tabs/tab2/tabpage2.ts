@@ -47,7 +47,7 @@ export class Tab2 {
           break;
         }
         }
-        console.log(this.innings);
+
       }
 
 
