@@ -62,10 +62,4 @@ export class Tab1 {
       this.matchservice.scorecardlist(summary);
     }
 
-
-
- //   console.log(this.ballarray);
- // }
-
-
 }
